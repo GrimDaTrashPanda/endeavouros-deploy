@@ -12,8 +12,8 @@ Full background and rationale: [EndeavourOS-Deployment-Guide.md](./EndeavourOS-D
 ## Usage
 
 ```bash
-git clone [https://github.com/<your-username>/<your-repo>.git](https://github.com/GrimDaTrashPanda/endeavouros-deploy)
-cd <your-repo>
+git clone https://github.com/GrimDaTrashPanda/endeavouros-deploy.git
+cd endeavouros-deploy
 chmod +x deploy.sh
 ./deploy.sh
 ```
