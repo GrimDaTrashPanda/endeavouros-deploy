@@ -12,7 +12,7 @@ Full background and rationale: [EndeavourOS-Deployment-Guide.md](./EndeavourOS-D
 ## Usage
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
+git clone [https://github.com/<your-username>/<your-repo>.git](https://github.com/GrimDaTrashPanda/endeavouros-deploy)
 cd <your-repo>
 chmod +x deploy.sh
 ./deploy.sh
