@@ -142,7 +142,9 @@ sudo pacman -S --needed \
   fastfetch \
   duf \
   tldr \
-  flatpak
+  flatpak \
+  vlc \
+  p7zip
 ```
 
 | Package | What it's for |
@@ -156,6 +158,8 @@ sudo pacman -S --needed \
 | `duf` | Disk usage utility, cleaner output than `df`. |
 | `tldr` | Simplified man pages / command cheat sheets. |
 | `flatpak` | Enables the Flatpak runtime for any sandboxed apps you add later. |
+| `vlc` | Media playback. |
+| `p7zip` | Archive extraction/creation, including `.7z`. |
 
 > 📌 **This is a starting point, not a mandate.** If a specific machine doesn't need video editing or image work — say, a pure documentation/browsing box — drop `shotcut` and `gimp` from the line. The rest is close to universal across your fleet.
 

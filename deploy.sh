@@ -81,6 +81,8 @@ PACKAGES=(
   duf
   tldr
   flatpak
+  vlc
+  p7zip
 )
 
 if [ -n "$UCODE_PKG" ]; then

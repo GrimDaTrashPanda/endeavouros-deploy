@@ -23,7 +23,7 @@ Run as your normal user, not root — it calls `sudo` internally where needed.
 ## What it does
 
 1. Detects CPU vendor (Intel/AMD) and installs the matching microcode package
-2. Installs the native toolkit: firefox, telegram-desktop, shotcut, gimp, glances, fastfetch, duf, tldr, flatpak
+2. Installs the native toolkit: firefox, telegram-desktop, shotcut, gimp, glances, fastfetch, duf, tldr, flatpak, vlc, p7zip
 3. Adds the Flathub remote
 4. Bootstraps `yay` (AUR helper) if not already present
 5. Installs Chrome, Brave, and Edge via pre-compiled `-bin` AUR targets
