@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # EndeavourOS Baseline Deployment Script
-# https://github.com/<your-username>/<your-repo>
+# https://github.com/GrimDaTrashPanda/endeavouros-deploy
 #
 # Run this AFTER first boot into your installed EndeavourOS system.
 # Mirror list optimisation (the 36% installer stall fix) happens during
