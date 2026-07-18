@@ -83,6 +83,9 @@ PACKAGES=(
   flatpak
   vlc
   p7zip
+  snapper
+  snap-pac
+  grub-btrfs
 )
 
 if [ -n "$UCODE_PKG" ]; then
