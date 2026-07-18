@@ -150,7 +150,7 @@ clear
 echo "========================================="
 echo "  UPGRADING OFFICIAL ARCH REPOSITORIES"
 echo "========================================="
-echo "==> Isolating foreign (AUR) packages..."
+echo "==> Updating official repositories..."
 sudo pacman -Syu
 echo ""
 echo "==> Checking for config drift (.pacnew files)..."
