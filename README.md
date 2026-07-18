@@ -6,9 +6,9 @@ Full background and rationale: [EndeavourOS-Deployment-Guide.md](./EndeavourOS-D
 
 ## Prerequisites
 
-- EndeavourOS already installed (GNOME desktop environment, LUKS encryption recommended)
-- Mirror list optimised via `reflector` **during the live install**, before running Calamares — this is a separate step that happens before you ever boot into the system this script runs on. See the deployment guide,
 - EndeavourOS already installed (GNOME desktop environment, **Btrfs filesystem**, LUKS encryption recommended)
+- Mirror list optimised via `reflector` **during the live install**, before running Calamares — this is a separate step that happens before you ever boot into the system this script runs on. See the deployment guide,
+
  Phase 1.
 
 ## Usage
