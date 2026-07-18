@@ -7,7 +7,9 @@ Full background and rationale: [EndeavourOS-Deployment-Guide.md](./EndeavourOS-D
 ## Prerequisites
 
 - EndeavourOS already installed (GNOME desktop environment, LUKS encryption recommended)
-- Mirror list optimised via `reflector` **during the live install**, before running Calamares — this is a separate step that happens before you ever boot into the system this script runs on. See the deployment guide, Phase 1.
+- Mirror list optimised via `reflector` **during the live install**, before running Calamares — this is a separate step that happens before you ever boot into the system this script runs on. See the deployment guide,
+- EndeavourOS already installed (GNOME desktop environment, **Btrfs filesystem**, LUKS encryption recommended)
+ Phase 1.
 
 ## Usage
 
@@ -29,6 +31,7 @@ Run as your normal user, not root — it calls `sudo` internally where needed.
 5. Installs Chrome, Brave, and Edge via pre-compiled `-bin` AUR targets
 6. Sets `MOZ_ENABLE_WAYLAND=1` for native Firefox/Mozilla Wayland rendering
 7. Creates `update-core.sh` / `update-apps.sh` scripts and matching GNOME launchers for the split-update workflow
+8. Installs Btrfs snapshot tooling (snapper, snap-pac, grub-btrfs) — auto-snapshots on every pacman transaction, bootable from GRUB if an update breaks things
 
 ## After running
 
