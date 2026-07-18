@@ -151,12 +151,7 @@ echo "========================================="
 echo "  UPGRADING OFFICIAL ARCH REPOSITORIES"
 echo "========================================="
 echo "==> Isolating foreign (AUR) packages..."
-FOREIGN_PKGS=$(pacman -Qmq 2>/dev/null | tr '\n' ',' | sed 's/,$//')
-if [ -n "$FOREIGN_PKGS" ]; then
-    sudo pacman -Syu --ignore "$FOREIGN_PKGS"
-else
-    sudo pacman -Syu
-fi
+sudo pacman -Syu
 echo ""
 echo "==> Checking for config drift (.pacnew files)..."
 find /etc -name "*.pacnew" 2>/dev/null
