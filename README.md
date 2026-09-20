@@ -25,10 +25,9 @@ Run as your normal user, not root — it calls `sudo` internally where needed.
 ## What it does
 
 1. Detects CPU vendor (Intel/AMD) and installs the matching microcode package
-2. Installs the native toolkit: firefox, telegram-desktop, shotcut, gimp, glances, fastfetch, duf, tldr, flatpak, vlc, p7zip
+2. Installs base tooling (git, base-devel, flatpak, fastfetch, duf, tldr, glances, p7zip)
 3. Adds the Flathub remote
-4. Bootstraps `yay` (AUR helper) if not already present
-5. Installs Chrome, Brave, and Edge via pre-compiled `-bin` AUR targets
+4. Installs the app loadout from clone-panda-msi (native apps plus its whole Flathub list)
 6. Sets `MOZ_ENABLE_WAYLAND=1` for native Firefox/Mozilla Wayland rendering
 7. Creates `update-core.sh` / `update-apps.sh` scripts and matching GNOME launchers for the split-update workflow
 8. Installs Btrfs snapshot tooling (snapper, snap-pac, grub-btrfs) — auto-snapshots on every pacman transaction, bootable from GRUB if an update breaks things

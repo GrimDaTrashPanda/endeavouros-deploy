@@ -72,16 +72,11 @@ info "Installing native toolkit (official repos)..."
 PACKAGES=(
   base-devel
   git
-  firefox
-  telegram-desktop
-  shotcut
-  gimp
   glances
   fastfetch
   duf
   tldr
   flatpak
-  vlc
   p7zip
   snapper
   snap-pac
@@ -103,26 +98,6 @@ echo ""
 info "Setting up Flathub remote..."
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-echo ""
-
-# ── Phase 4: AUR helper (yay) ──────────────────────────────────────────────
-if command -v yay &> /dev/null; then
-  info "yay already installed, skipping bootstrap."
-else
-  info "Bootstrapping yay (AUR helper)..."
-  BUILD_DIR=$(mktemp -d)
-  git clone --quiet https://aur.archlinux.org/yay-bin.git "$BUILD_DIR/yay-bin"
-  (cd "$BUILD_DIR/yay-bin" && makepkg -si --noconfirm)
-  rm -rf "$BUILD_DIR"
-fi
-
-echo ""
-
-# ── Phase 5: Browser stack (AUR, pre-compiled -bin targets) ──────────────
-info "Installing browser stack (Chrome, Brave, Edge)..."
-
-yay -S --needed --noconfirm google-chrome brave-bin microsoft-edge-stable-bin
 
 echo ""
 
@@ -231,6 +206,17 @@ EOF
 update-desktop-database "$HOME/.local/share/applications/" 2>/dev/null || true
 
 echo ""
+# ── App loadout (shared with clone-panda-msi) ────────────────────────────
+info "Installing app loadout from clone-panda-msi..."
+LOADOUT_DIR="$HOME/.local/share/clone-panda-msi"
+if [ -d "$LOADOUT_DIR/.git" ]; then
+  git -C "$LOADOUT_DIR" pull --ff-only
+else
+  git clone https://github.com/GrimDaTrashPanda/clone-panda-msi.git "$LOADOUT_DIR"
+fi
+"$LOADOUT_DIR/install-loadout.sh"
+echo ""
+
 info "Deployment complete."
 echo ""
 echo "Next steps:"
