@@ -1,6 +1,6 @@
 # EndeavourOS Baseline Deployment
 
-A single, idempotent script that takes a fresh EndeavourOS install (GNOME, Wayland) to a fully provisioned baseline: native toolkit, AUR browser stack, Wayland tuning, and a split-phase update workflow with GNOME launchers.
+A single, idempotent script that takes a fresh EndeavourOS install (GNOME, Wayland) to a fully provisioned baseline: base tooling, the shared app loadout, Wayland tuning, and a split-phase update workflow with GNOME launchers.
 
 Full background and rationale: [EndeavourOS-Deployment-Guide.md](./EndeavourOS-Deployment-Guide.md)
 
@@ -44,4 +44,4 @@ Everything uses `--needed`/idempotent checks. Re-running after adding new packag
 
 ## Customizing for a different machine
 
-Edit the `PACKAGES` array in `deploy.sh` directly — e.g. drop `shotcut`/`gimp` for a lightweight box that's just browsing/docs. Everything else (browsers, update workflow, Wayland tuning) stays universal regardless of the native package list.
+Edit the `PACKAGES` array in `deploy.sh` for base tooling. Apps come from [clone-panda-msi](https://github.com/GrimDaTrashPanda/clone-panda-msi), so change them there.
