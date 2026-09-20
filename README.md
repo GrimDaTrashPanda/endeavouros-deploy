@@ -35,7 +35,7 @@ Run as your normal user, not root — it calls `sudo` internally where needed.
 ## After running
 
 - Log out and back in (applies the Wayland env var)
-- Set the Wayland flag manually in each Chromium browser — `chrome://flags/#ozone-platform-hint`, `brave://flags/#ozone-platform-hint`, `edge://flags/#ozone-platform-hint` — switch to **Wayland**, relaunch. One-time per browser, not automatable from a script since it's stored in each browser's own profile.
+- Set the Wayland flag manually in each Chromium browser — `chrome://flags/#ozone-platform-hint`, `brave://flags/#ozone-platform-hint` — switch to **Wayland**, relaunch. One-time per browser, not automatable from a script since it's stored in each browser's own profile.
 - Press **Super**, search "Update" — confirm both launchers appear
 
 ## Safe to re-run
